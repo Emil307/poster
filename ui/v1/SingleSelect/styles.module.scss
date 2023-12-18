@@ -1,0 +1,47 @@
+.button {
+ display: flex;
+ align-items: center;
+ gap: 4px;
+ padding: 4px 4px 4px 8px;
+ border-radius: 32px;
+ background-color: var(--main-white);
+
+ transition: .2s ease-in-out;
+}
+
+.button:hover {
+ background-color: var(--hover-white);
+}
+
+.name {
+ font-family: "Unbounded", sans-serif;
+ font-size: 12px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: normal;
+
+ color: var(--main-black, #000);
+}
+
+.options {
+ position: absolute;
+ width: max-content;
+ min-width: 213px;
+ padding: 4px;
+ border-radius: 8px;
+ background-color: var(--main-white);
+}
+
+.option {
+ display: flex;
+ align-items: center;
+ gap: 4px;
+ padding: 8px;
+
+ cursor: pointer;
+ transition: .2s ease-in-out;
+}
+
+.option:hover {
+ background-color: var(--hover-white);
+}
