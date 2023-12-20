@@ -1,0 +1,28 @@
+.container {
+ position: fixed;
+ top: 0;
+ left: 0;
+ display: flex;
+ width: 100vw;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+}
+
+.dialog {
+ position: relative;
+ display: flex;
+ width: fit-content;
+ flex-direction: column;
+ gap: 32px;
+ padding: 32px;
+ border-radius: 16px;
+ background: var(--main-white);
+ margin: 0 auto;
+}
+
+.close {
+ position: absolute;
+ top: 32px;
+ right: 32px;
+}
