@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Page, Content } from './styles';
 import Image from "next/image";
-import backgroundImage from "../../../../public/icons/logo-footer.svg";
+import backgroundImage from "@/public/icons/logo-footer.svg";
 
 export interface LayoutProps {
     children: JSX.Element

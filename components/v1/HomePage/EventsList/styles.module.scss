@@ -1,0 +1,11 @@
+.carousel > ul {
+    display: flex;
+    gap: 16px;
+//     height: 264px;
+//     width: 100%;
+}
+
+.carousel > ul > li {
+    width: 100% !important;
+    height: 100%;
+}

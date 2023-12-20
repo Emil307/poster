@@ -9,7 +9,6 @@ export const InputStyled = styled.input`
  color: var(--addable-dark-gray);
 
  width: 100%;
- max-width: 398px;
  padding: 7px 8px;
  border-radius: 8px;
  background-color: var(--main-white);

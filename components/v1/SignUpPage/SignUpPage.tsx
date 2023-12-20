@@ -9,7 +9,7 @@ export const SignUpPage: React.FC = () => {
   return (
     <form>
         <h1 style={{ textAlign: "center" }}>Регистрация</h1>
-        <InputsWrapper>
+        <InputsWrapper style={{ width: '398px' }}>
             <Label>
                 <span>E-mail</span>
                 <Input type='email' />

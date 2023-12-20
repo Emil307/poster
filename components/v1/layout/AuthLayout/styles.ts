@@ -11,8 +11,8 @@ export const Page = styled.div`
 `
 
 export const Content = styled.div`
- width: calc(100% - 32px);
- max-width: 413px;
+ max-width: calc(100% - 32px);
+ width: max-content;
  min-width: 288px;
  padding: 24px;
  border-radius: 32px;

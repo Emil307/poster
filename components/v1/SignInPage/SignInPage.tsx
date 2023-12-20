@@ -10,7 +10,7 @@ export const SignInPage: React.FC = () => {
   return (
     <form>
       <h1 style={{ textAlign: "center" }}>Вход</h1>
-      <InputsWrapper>
+      <InputsWrapper style={{ width: '398px' }}>
         <Label>
           <span>E-mail</span>
           <Input type='E-mail' />

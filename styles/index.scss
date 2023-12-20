@@ -46,6 +46,7 @@ body {
 
 body {
  background-color: #f8f8f8;
+ overflow-x: hidden;
 }
 
 input,
@@ -73,7 +74,15 @@ button::-moz-focus-inner {
 }
 
 a {
-    color: inherit;
+    font-family: "WixMadeforDisplay", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    color: var(--main-white, #FFF);
+
+    cursor: pointer;
 }
 
 a,
@@ -113,6 +122,14 @@ h1 {
     color: var(--main-black);
 }
 
+h3 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 select::-ms-expand {
  display: none;
 }
@@ -124,4 +141,14 @@ select {
  -moz-appearance: none;
  -webkit-appearance: none;
  appearance: none;
+}
+
+p {
+    font-family: "WixMadeforDisplay", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    color: var(--main-black);
 }
