@@ -9,11 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@linaria/babel-preset": "^5.0.3",
+    "@headlessui/react": "^1.7.17",
+    "@linaria/babel-preset": "^5.0.4",
+    "@linaria/core": "^5.0.2",
     "@linaria/react": "^5.0.3",
+    "@meinefinsternis/react-horizontal-date-picker": "^1.0.1",
+    "@types/styled-components": "^5.1.30",
     "next": "13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-multi-carousel": "^2.8.4",
+    "sass": "^1.69.5",
+    "styled-components": "^6.1.1",
     "typescript": "5.2.2"
   },
   "devDependencies": {

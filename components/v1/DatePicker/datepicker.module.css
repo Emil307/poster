@@ -1,0 +1,75 @@
+.container {
+    width: 100%;
+    max-width: 1224px;
+    margin: 45px auto 0;
+    padding: 0 16px;
+}
+
+.container button::after {
+    display: none;
+}
+
+.dayItem {
+ width: 52px !important;
+ height: 58px !important;
+ margin: 0 !important;
+ margin-left: 16px !important;
+
+ font-size: 1rem !important;
+ line-height: 1.25 !important;
+ border-radius: 1rem !important;
+ background: var(--main-white, #FFF);
+}
+
+.dayItem:hover {
+ background-color: #fff !important;
+ outline: 6px solid #F2F2F2;
+ outline-offset: -6px;
+}
+
+.dayLabel {
+ font-size: 0.625rem !important;
+ color: rgba(0, 0, 0, .3) !important;
+ margin-bottom: 8px !important;
+}
+
+.dateLabel {
+ color: #000 !important;
+}
+
+.weekendItem .dayLabel {
+ color: #FF2B2B !important;
+ opacity: .3;
+} 
+
+.selectedDay {
+ background-color: #fff !important;
+ outline: 6px solid #D8D8D8;
+ outline-offset: -6px;
+}
+
+.selectedDay .dateLabel {
+ background-color: #fff !important;
+}
+
+
+.rangeDays {
+
+}
+
+.container svg {
+ fill: #000 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 30px auto 0;
+        max-width: 375px;
+    }
+
+    .dayItem {
+        width: 50px !important;
+        height: 56px !important;
+        margin-left: 8px !important;
+    }
+}
