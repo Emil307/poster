@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Datepicker, DatepickerEvent} from "@meinefinsternis/react-horizontal-date-picker";
-import { ru } from "date-fns/locale";
+import { enAU, ru, el } from "date-fns/locale";
 import styles from './datepicker.module.css';
+import { useRouter } from 'next/router';
 
 const DatepickerClasses = {
   selectedDay: styles?.selectedDay,
@@ -24,6 +25,8 @@ const DatePickerComponent: React.FC = () => {
     rangeDates: [],
   });
 
+  const { locale } = useRouter();
+
   const handleChange = (d: DatepickerEvent) => {
     const [startValue, endValue, rangeDates] = d;
     setDate((prev) => ({ ...prev, endValue, startValue, rangeDates }));
@@ -33,7 +36,7 @@ const DatePickerComponent: React.FC = () => {
     <div className={styles.container}>
       <Datepicker
         onChange={handleChange}
-        locale={ru}
+        locale={locale === 'en' ? enAU : locale === 'el' ? el : locale === 'ru' ? ru : enAU}
         startValue={date.startValue}
         endValue={date.endValue}
         classNames={DatepickerClasses}

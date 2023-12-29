@@ -3,6 +3,7 @@ import { Combobox, Transition } from '@headlessui/react'
 import { Button } from '../../../ui/v1/Button/Button';
 import styles from './styles.module.scss';
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 export type Person = {
     id: Number;
@@ -22,6 +23,7 @@ export const AutoCompleteInput: React.FC = () => {
   const [mobileSearchActive, setMobileSearchActive] = useState(false);
   const [selected, setSelected] = useState('');
   const [query, setQuery] = useState('');
+  const { t: translate } = useTranslation('header'); 
 
   const filteredPeople =
     query === ''
@@ -40,7 +42,7 @@ export const AutoCompleteInput: React.FC = () => {
           <div className={styles.container}>
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <Combobox.Input
-                placeholder='Артист, площадка,  мероприятие'
+                placeholder={translate('Artist, venue, event')}
                 className={styles.input}
                 displayValue={(person: Person) => person.name}
                 onChange={(event) => setQuery(event.target.value)}

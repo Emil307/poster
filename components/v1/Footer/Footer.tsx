@@ -4,14 +4,16 @@ import { FooterContainer, FormContainer, Title, Paragraph, Form, Info, Socials, 
 import backgroundImage from '@/public/icons/logo-footer.svg';
 import { Input } from '@/ui/v1/Input/Input';
 import { Button } from '@/ui/v1/Button/Button';
+import { useTranslation } from "next-i18next";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     const [email, setEmail] = useState('');
+    const { t: translate } = useTranslation('footer'); 
 
     return <FooterContainer style={{ backgroundImage: `url(${backgroundImage.src})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center bottom', backgroundSize: 'contain' }}>
         <FormContainer>
-            <Title>Хочешь быть в курсе всех мероприятий?</Title>
-            <Paragraph>Подписывайся на нашу рассылку</Paragraph>
+            <Title>{translate("title")}</Title>
+            <Paragraph>{translate("subTitle")}</Paragraph>
             <Form>
                 <Input 
                     placeholder='example@gmail.com' 
@@ -20,7 +22,7 @@ export const Footer = () => {
                     onChange={e => setEmail(e.target.value)}
                     style={{ borderRadius: '24px', padding: '16px' }}
                 />
-                <Button>Подпишусь!</Button>
+                <Button>{translate("button")}</Button>
             </Form>
         </FormContainer>
         <Info>
@@ -29,22 +31,22 @@ export const Footer = () => {
                 <a><Image src='/icons/facebook.svg' alt="facebook" width={32} height={32} priority={true} /></a>
             </Socials>
             <InfoItem>
-                <LinksTitle>Партнерам</LinksTitle>
+                <LinksTitle>{translate("partners")}</LinksTitle>
                 <Links>
-                    <Link>Стать организатором</Link>
-                    <Link>Связаться с нами</Link>
-                    <Link>API партнерам </Link>
+                    <Link>{translate("organizer")}</Link>
+                    <Link>{translate("contact")}</Link>
+                    <Link>{translate("APIPartnets")} </Link>
                 </Links>
             </InfoItem>
             <InfoItem>
                 <LinksTitle>My ticket</LinksTitle>
                 <Links>
-                    <Link>Мои билеты</Link>
-                    <Link>Возврат билетов</Link>
-                    <Link>Пользовательское соглашение</Link>
-                    <Link>Безопасность данных</Link>
-                    <Link>Офлайн кассы</Link>
-                    <Link>QR-коды</Link>
+                    <Link>{translate("myTickets")}</Link>
+                    <Link>{translate("return")}</Link>
+                    <Link>{translate("TermsOfUse")}</Link>
+                    <Link>{translate("dataSecurity")}</Link>
+                    <Link>{translate("OfflineCashRegisters")}</Link>
+                    <Link>{translate("QRCodes")}</Link>
                 </Links>
             </InfoItem>
         </Info>

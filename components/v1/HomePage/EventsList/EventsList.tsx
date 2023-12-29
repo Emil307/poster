@@ -6,6 +6,7 @@ import { Container, Header, Info, EventsCount, Arrows, Events } from './styles';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from './styles.module.scss';
+import { useTranslation } from "next-i18next";
 
 export interface EventsListProps {
   title: string
@@ -28,12 +29,14 @@ const EventsList: React.FC<EventsListProps> = ({ title }) => {
       }
     };
 
+    const { t: translate } = useTranslation('index'); 
+
   return (
     <Container>
         <Header>
             <Info>
                 <h1>{title}</h1>
-                <EventsCount>{events.length} событие</EventsCount>
+                <EventsCount>{events.length} {translate('events')}</EventsCount>
             </Info>
             {/* <Arrows>
                 <Image src="/icons/arrow-left.svg" alt="left" width={24} height={24} priority={true} />

@@ -1,3 +1,7 @@
+.container {
+    position: relative;
+}
+
 .button {
  display: flex;
  align-items: center;
@@ -25,6 +29,9 @@
 
 .options {
  position: absolute;
+ top: 32px;
+ left: 0;
+ z-index: 10;
  width: max-content;
  min-width: 213px;
  padding: 4px;
@@ -44,4 +51,14 @@
 
 .option:hover {
  background-color: var(--hover-white);
+}
+
+@media screen and (max-width: 768px) {
+    .button > span {
+        display: none;
+    }
+
+    .options {
+        min-width: 150px;
+    }
 }

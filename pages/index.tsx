@@ -4,9 +4,18 @@ import { THomePageProps } from '@/components/v1/HomePage/types'
 import { NextPageContext } from 'next'
 import { HomePage } from '@/components/v1/HomePage/HomePage'
 import { withLayout } from '@/components/v1/layout/Layout'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const HomeNextPage = (props: THomePageProps) => {
   return <HomePage {...props} />
+}
+
+export async function getStaticProps({ locale }: any) {
+  return {
+      props: {
+          ... (await serverSideTranslations(locale, ['index', 'header', 'footer'])),
+      },
+  }
 }
 
 HomeNextPage.getInitialProps = async (ctx: NextPageContext) => {
