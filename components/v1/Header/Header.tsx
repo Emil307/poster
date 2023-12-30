@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 import { useTranslation } from "next-i18next";
 
 export const Header = (): JSX.Element => {
-    const { push } = useRouter();
+    const { locale, push } = useRouter();
     const { t: translate } = useTranslation('header'); 
 
     const languages = [
@@ -49,6 +49,7 @@ export const Header = (): JSX.Element => {
                 <Image src="/icons/logo-header.svg" alt="my ticket" width={83} height={32} priority={true} />
                 <AutoCompleteInput />
             </Left>
+            {locale}
             <Right>
                 <SingleSelect options={languages} />
                 <Link href='/SignIn'>
