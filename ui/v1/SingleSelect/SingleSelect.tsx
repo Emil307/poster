@@ -27,7 +27,7 @@ export const SingleSelect: React.FC<SingleSelectProps> = ({ options, ...props })
         <Listbox.Button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
         {selected.icon}
         <span className={styles.name}>{selected.name}</span>
-        {isOpen ? <IoIosArrowUp size={"20"}/> : <IoIosArrowDown size={"20"}/>}
+        {isOpen ? <IoIosArrowUp color='#000' size={"20"}/> : <IoIosArrowDown color='#000' size={"20"}/>}
         </Listbox.Button>
         <Listbox.Options className={styles.options}>
           {options.map((option, optionIdx) => (
