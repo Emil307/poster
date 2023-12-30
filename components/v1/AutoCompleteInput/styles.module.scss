@@ -149,5 +149,6 @@
     .options {
         top: 64px;
         left: calc((100vw - 339px) / 2);
+        z-index: 1001;
     }
 }

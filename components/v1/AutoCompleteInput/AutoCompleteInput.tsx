@@ -60,8 +60,8 @@ export const AutoCompleteInput: React.FC = () => {
             </Button>
           </div>
           {mobileSearchActive &&
-            <div className={styles.mobileWidget}>
-              <div className={styles.mobileWidgetContent}>
+            <div className={styles.mobileWidget} onClick={() => setMobileSearchActive(false)}>
+              <div className={styles.mobileWidgetContent} onClick={e => e.stopPropagation()}>
                 <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
                   <Combobox.Input
                     placeholder='Артист, площадка,  мероприятие'
