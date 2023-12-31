@@ -72,10 +72,12 @@ export const Info = styled.div`
 
 export const Socials = styled.div`
     width: min-content;
+    height: 32px;
     display: flex;
     gap: 20px;
 
     @media screen and (max-width: 768px) {
+        height: 58px;
         padding-bottom: 26px;
     }
 `;

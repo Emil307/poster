@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Container, Bg, Top, Limits, Cost, Bottom, Title, Info } from './styles';
+import { Container, Bg, Top, Tags, Cost, Bottom, Title, Info } from './styles';
 import backgroundImage from '@/public/images/default-event-intro.jpg';
 
 export type TCard = {
@@ -27,10 +27,10 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
         }}>
       </Bg>
       <Top>
-        <Limits>
+        <Tags>
           <Cost>{event.cost}</Cost>
           <p>{event.startAge}</p>
-        </Limits>
+        </Tags>
         <Image src="/icons/heart.svg" alt="like" width={24} height={24} priority={true} />
       </Top>
       <Bottom>

@@ -41,7 +41,7 @@ export const Top = styled.div`
     justify-content: space-between;
 `;
 
-export const Limits = styled.div`
+export const Tags = styled.div`
     display: flex;
     gap: 8px;
 

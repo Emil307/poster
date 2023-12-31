@@ -1,7 +1,7 @@
 export const events = [
     {
         id: 0,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '1Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -10,7 +10,7 @@ export const events = [
     },
     {
         id: 1,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '2Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -19,7 +19,7 @@ export const events = [
     },
     {
         id: 2,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '3Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -28,7 +28,7 @@ export const events = [
     },
     {
         id: 3,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '4Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -37,7 +37,7 @@ export const events = [
     },
     {
         id: 4,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '5Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -46,7 +46,7 @@ export const events = [
     },
     {
         id: 5,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '6Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -55,7 +55,7 @@ export const events = [
     },
     {
         id: 6,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '7Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -64,7 +64,7 @@ export const events = [
     },
     {
         id: 7,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '8Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -73,7 +73,7 @@ export const events = [
     },
     {
         id: 8,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '9Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
@@ -82,7 +82,7 @@ export const events = [
     },
     {
         id: 9,
-        title: 'Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
+        title: '10Codex Showcase w Spartaque & Teenage Mutants - POSTPONED',
         date: '10 ноября',
         artist: 'ETKO HANGAR',
         cost: 'от 25 €',
