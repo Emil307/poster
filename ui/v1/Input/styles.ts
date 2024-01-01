@@ -15,7 +15,7 @@ export const InputStyled = styled.input`
  border: 1px solid var(--addable-grey);
 
  &:focus {
-  outline: 1px solid var(--main-yellow, #FFE700);
+  border: 1px solid var(--main-yellow, #FFE700);
   border-radius: 8px;
  }
 
