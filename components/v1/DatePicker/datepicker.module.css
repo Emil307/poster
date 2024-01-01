@@ -23,8 +23,7 @@
 
 .dayItem:hover {
  background-color: #fff !important;
- outline: 6px solid #F2F2F2;
- outline-offset: -6px;
+ border: 6px solid #D8D8D8; 
 }
 
 .dayLabel {
