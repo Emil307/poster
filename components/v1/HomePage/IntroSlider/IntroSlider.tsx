@@ -42,7 +42,6 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ items, activeSlideIndex }) =>
                 backgroundRepeat: 'no-repeat'
                 }}>
             </Bg>
-            <Button><Image src="/icons/heart.svg" alt="like" width={24} height={24} priority={true} /></Button>
             <Bottom>
                 <Title>{items[mainSlideIndex - 2]?.title}</Title>
                 <Info>{items[mainSlideIndex - 2]?.date} • {items[mainSlideIndex - 2]?.artist}</Info>
@@ -61,7 +60,6 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ items, activeSlideIndex }) =>
                     backgroundRepeat: 'no-repeat'
                     }}>
                 </Bg>
-                <Button><Image src="/icons/heart.svg" alt="like" width={24} height={24} priority={true} /></Button>
                 {mainSlideIndex === 0 ?
                 <Bottom>
                     <Title>{items[items.length - 1]?.title}</Title>
@@ -107,7 +105,6 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ items, activeSlideIndex }) =>
                     backgroundRepeat: 'no-repeat'
                     }}>
                 </Bg>
-                <Button><Image src="/icons/heart.svg" alt="like" width={24} height={24} priority={true} /></Button>
                 {items.length === mainSlideIndex + 1 ? 
                 <Bottom>
                     <Title>{items[0]?.title}</Title>
@@ -136,7 +133,6 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ items, activeSlideIndex }) =>
                 backgroundRepeat: 'no-repeat'
                 }}>
             </Bg>
-            <Button><Image src="/icons/heart.svg" alt="like" width={24} height={24} priority={true} /></Button>
             <Bottom>
                 <Title>{items[mainSlideIndex + 2]?.title}</Title>
                 <Info>{items[mainSlideIndex + 2]?.date} • {items[mainSlideIndex + 2]?.artist}</Info>
