@@ -12,7 +12,7 @@ export interface EventsListProps {
   title: string
 }
 
-const EventsList: React.FC<EventsListProps> = ({ title }) => {    
+const CategoryEventsList: React.FC<EventsListProps> = ({ title }) => {    
     const responsive = {
       desktop: {
         breakpoint: {
@@ -58,4 +58,4 @@ const EventsList: React.FC<EventsListProps> = ({ title }) => {
   )
 }
 
-export default EventsList;
+export default CategoryEventsList;

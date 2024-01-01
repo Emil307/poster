@@ -1,7 +1,7 @@
 import React from "react";
 import IntroSlider from "@/components/v1/HomePage/IntroSlider/IntroSlider";
 import DatePickerComponent from "@/components/v1/DatePicker/DatePickerComponent";
-import EventsList from "@/components/v1/HomePage/EventsList/EventsList";
+import CategoryEventsList from "@/components/v1/HomePage/CategoryEventsList/CategoryEventsList";
 
 import { THomePageProps } from './types';
 import { HomePageContainer } from './styles'
@@ -14,9 +14,9 @@ export const HomePage = ({ pageTitle }: THomePageProps) => {
     return <HomePageContainer>
         <IntroSlider items={events} activeSlideIndex={3}/>
         <DatePickerComponent />
-        <EventsList title={translate('SoonTitle')}/>
-        <EventsList title={translate('ConcertsTitle')}/>
-        <EventsList title={translate('ForKidsTitle')}/>
-        <EventsList title={translate('TheatersTitle')}/>
+        <CategoryEventsList title={translate('SoonTitle')}/>
+        <CategoryEventsList title={translate('ConcertsTitle')}/>
+        <CategoryEventsList title={translate('ForKidsTitle')}/>
+        <CategoryEventsList title={translate('TheatersTitle')}/>
     </HomePageContainer>
 }

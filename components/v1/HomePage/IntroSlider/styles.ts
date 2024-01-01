@@ -8,6 +8,10 @@ export const Container = styled.div`
     max-width: 1512px;
     margin: 45px auto 0;
     overflow-x: hidden;
+    
+    @media screen and (max-width: 768px) {
+        margin: 0 auto;
+    }
 `;
 
 export const Center = styled.div`
@@ -44,7 +48,8 @@ export const MainSlide = styled.div`
 
     @media screen and (max-width: 768px) {
         width: 295px;
-        height: 377px;
+        height: 393px;
+        margin-top: 16px;
     }
 `;
 

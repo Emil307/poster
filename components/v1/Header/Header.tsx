@@ -34,13 +34,6 @@ export const Header = (): JSX.Element => {
                 push('/', undefined, {locale: 'el'});
             },
         },
-        {
-            name: 'Hebrew',
-            icon: <Image src="/icons/hebrew.svg" alt="my ticket" width={20} height={20} priority={true} quality={100} />,
-            onSelect: () => {
-                push('/', undefined, {locale: 'iw'});
-            },
-        },
     ]
 
     return <Container>
