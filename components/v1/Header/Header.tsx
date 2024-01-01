@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 import { useTranslation } from "next-i18next";
 
 export const Header = (): JSX.Element => {
-    const { push } = useRouter();
+    const { push, locale } = useRouter();
     const { t: translate } = useTranslation('header'); 
 
     const languages = [
@@ -43,7 +43,7 @@ export const Header = (): JSX.Element => {
                 <AutoCompleteInput />
             </Left>
             <Right>
-                <SingleSelect options={languages} />
+                <SingleSelect options={languages} defaultSelected={locale === 'en' ? languages[0] : locale === 'ru' ? languages[1] : languages[2]} />
                 <Link href='/SignIn'>
                     <Button styleType="tertiary" style={{ fontSize: "12px", width: "62px", height: "31px" }}>{translate('Login')}</Button>
                 </Link>

@@ -16,9 +16,8 @@ export interface SingleSelectProps {
  defaultSelected?: TOption;
 }
 
-export const SingleSelect: React.FC<SingleSelectProps> = ({ options, ...props }) => {
-  const defaultSelected: TOption = props.defaultSelected || options[0];
-  const [selected, setSelected] = useState(defaultSelected);
+export const SingleSelect: React.FC<SingleSelectProps> = ({ options, defaultSelected, ...props }) => {
+  const [selected, setSelected] = useState(defaultSelected || options[0]);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
