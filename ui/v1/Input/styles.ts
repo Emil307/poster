@@ -16,6 +16,7 @@ export const InputStyled = styled.input`
 
  &:focus {
   outline: 1px solid var(--main-yellow, #FFE700);
+  border-radius: 8px;
  }
 
  &:invalid {
