@@ -51,10 +51,6 @@ export const MainSlide = styled.div`
 export const PrevSlide = styled(Slide)`
     transform: rotate(-3deg);
     margin-top: 14px;
-
-    @media screen and (max-width: 768px) {
-        z-index: -1;
-    }
 `;
 
 
