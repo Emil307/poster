@@ -44,8 +44,7 @@
 
 .selectedDay {
  background-color: #fff !important;
- outline: 6px solid #D8D8D8;
- outline-offset: -6px;
+ border: 6px solid #D8D8D8; 
 }
 
 .selectedDay .dateLabel {
