@@ -1,10 +1,10 @@
 import React from 'react';
-import type { TCard } from '@/domain/types/types';
+import type { TEvent } from '@/domain/types/types';
 import EventCard from '@/components/v1/EventCard/EventCard';
 import { Container } from './styles';
 
 export interface EventsListProps {
-    events: TCard[];
+    events: TEvent[];
 }
 
 const EventsList: React.FC<EventsListProps> = ({ events }) => {
