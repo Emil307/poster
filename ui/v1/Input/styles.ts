@@ -6,7 +6,6 @@ export const InputStyled = styled.input`
  font-style: normal;
  font-weight: 400;
  line-height: normal;
- color: var(--addable-dark-gray);
 
  width: 100%;
  padding: 7px 8px;

@@ -27,10 +27,12 @@ export const Content = styled.div`
 
 export const Left = styled.div`
     display: flex;
+    align-items: center;
     gap: 20px;
 `
 
 export const Right = styled.div`
     display: flex;
+    align-items: center;
     gap: 32px;
 `

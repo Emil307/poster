@@ -1,23 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
+import type { TEvent } from '@/domain/types/types';
 import { Container, Bg, Top, Tags, Cost, Bottom, Title, Info } from './styles';
 import backgroundImage from '@/public/images/default-event-intro.jpg';
 
-export type TCard = {
-  id: number,
-  title: string,
-  date: string,
-  artist: string,
-  cost: string,
-  startAge: string,
-  introImage: string,
-}
-
 export interface EventCardProps {
- event: TCard;
+ event: TEvent;
 }
 
-const EventCard: React.FC<EventCardProps> = ({ event }) => {
+const CategoryEventCard: React.FC<EventCardProps> = ({ event }) => {
   return (
     <Container>
       <Bg
@@ -41,4 +32,4 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   )
 }
 
-export default EventCard;
+export default CategoryEventCard;

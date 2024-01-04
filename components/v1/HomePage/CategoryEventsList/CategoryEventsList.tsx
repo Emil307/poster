@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { events } from '@/data/events';
-import EventCard from '@/components/v1/HomePage/EventCard/EventCard';
+import CategoryEventCard from '@/components/v1/HomePage/CategoryEventCard/CategoryEventCard';
 import { Container, Header, Info, EventsCount, Arrows, Events } from './styles';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -51,7 +51,7 @@ const CategoryEventsList: React.FC<EventsListProps> = ({ title }) => {
           draggable={false}
         >
           {events.map(event =>
-            <EventCard event={event} key={event.id}/>
+            <CategoryEventCard event={event} key={event.id}/>
           )}
         </Carousel>
     </Container>

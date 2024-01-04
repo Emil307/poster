@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { TCard } from '@/components/v1/HomePage/EventCard/EventCard';
+import { TCard } from '@/components/v1/HomePage/CategoryEventCard/CategoryEventCard';
 import backgroundImage from '@/public/images/default-event-intro.jpg';
 import { 
     Container,
@@ -15,7 +15,7 @@ import {
     Button
 } from './styles';
 
-import { Title, Info, Tags, Cost } from '@/components/v1/HomePage/EventCard/styles';
+import { Title, Info, Tags, Cost } from '@/components/v1/HomePage/CategoryEventCard/styles';
 
 export interface IntroSliderProps {
     items: TCard[];

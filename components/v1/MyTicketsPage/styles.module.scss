@@ -1,0 +1,70 @@
+.container {
+    max-width: 1223px;
+    width: 100%;
+    min-height: 597px;
+    margin: 0 auto;
+    padding: 24px 0 90px;
+}
+
+.toggle {
+    width: fit-content;
+    margin: 0 auto 60px;
+    display: flex;
+    gap: 8px;
+    padding: 4px;
+    border-radius: 24px;
+    background: var(--addable-grey);
+}
+
+.selected {
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--main-black, #000);
+
+    padding: 12px 16px;
+    border-radius: 48px;
+    background-color: var(--main-white);
+}
+
+.default {
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--main-black, #000);
+
+    padding: 12px 16px;
+    border-radius: 48px;
+    opacity: 0.3;
+}
+
+.tickets {
+    width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 397px);
+    gap: 16px; 
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 343px;
+        width: 100%;
+        min-height: 597px;
+        margin: 0 auto;
+        padding: 16px 0 47px;
+    }
+
+    .toggle {
+        margin: 0 auto 40px;
+    }
+
+    .tickets {
+        grid-template-columns: repeat(1, 343px);
+        gap: 40px; 
+    }
+}

@@ -8,19 +8,19 @@ import { Button } from '@/ui/v1/Button/Button';
 export const ResetPasswordPage: React.FC = () => {
   return (
     <form>
-      <h1 style={{ textAlign: "center", marginBottom: '20px' }}>Восстановление пароля</h1>
-      <p style={{ maxWidth: '498px' }}>
-        Для восстановления доступа к аккаунту отправим вам ссылку для сброса и обновления пароля
-      </p>
+      <h1 style={{ textAlign: "center", marginBottom: '20px' }}>Сброс пароля</h1>
       <InputsWrapper>
         <Label>
-          <span>E-mail</span>
-          <Input type='E-mail' />
+          <span>Новый пароль</span>
+          <Input type='password' />
+        </Label>
+        <Label>
+          <span>Повторите новый пароль</span>
+          <Input type='password' />
         </Label>
       </InputsWrapper>
       <ButtonsWrapper>
-        <Button type='submit' styleType='primary'>Отправить ссылку</Button>
-        <Link href='/SignIn'><Button type='button' styleType='secondary'>Назад</Button></Link>
+        <Button type='submit' styleType='primary'>Обновить пароль</Button>
       </ButtonsWrapper>
     </form>
   )

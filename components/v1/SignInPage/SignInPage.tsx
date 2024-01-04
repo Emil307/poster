@@ -19,7 +19,7 @@ export const SignInPage: React.FC = () => {
           <span>Пароль</span>
           <Input type='password' />
         </Label>
-        <LinkStyled href="/ResetPassword">Не помню пароль</LinkStyled>
+        <LinkStyled href="/RecoveryPassword">Не помню пароль</LinkStyled>
       </InputsWrapper>
       <ButtonsWrapper>
         <Button type='submit' styleType='primary'>Войти</Button>
