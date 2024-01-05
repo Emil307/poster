@@ -9,7 +9,7 @@ const SupportNextPage = () => {
 export async function getStaticProps({ locale }: any) {
   return {
       props: {
-          ... (await serverSideTranslations(locale, ['index', 'header', 'footer'])),
+          ... (await serverSideTranslations(locale, ['support'])),
       },
   }
 }

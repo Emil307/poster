@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 import type { TMessage } from '@/domain/types/types';
 import { Input } from '@/ui/v1/Input/Input';
 import Image from 'next/image';
+import { useTranslation } from "next-i18next";
 
 export interface ChatProps {
     messages: TMessage[]
@@ -11,6 +12,7 @@ export interface ChatProps {
 const Chat: React.FC<ChatProps> = ({ messages }) => {
     const [message, setMessage] = useState('');
     const [buttonVisible, setButtonVisible] = useState(false);
+    const { t: translate } = useTranslation('support'); 
   
     useEffect(() => {
       if (message) {
@@ -40,7 +42,7 @@ const Chat: React.FC<ChatProps> = ({ messages }) => {
         </div>
         <div className={styles.controllers}>
         <Input 
-            placeholder='Сообщение...'
+            placeholder={translate('Message...')}
             value={message}
             onChange={event => setMessage(event.target.value)}
         />
