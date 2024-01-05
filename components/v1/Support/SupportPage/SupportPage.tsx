@@ -17,6 +17,7 @@ export const SupportPage = () => {
                         alt='close'
                         width={24}
                         height={24}
+                        priority={true}
                     />
                 </Link>
             </div>
