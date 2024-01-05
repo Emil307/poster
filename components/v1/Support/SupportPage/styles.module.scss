@@ -1,0 +1,34 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 0 35px;
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-white);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 343px;
+    margin: 0 auto;
+}
+
+.title {
+    color: var(--main-black, #000);
+    text-align: center;
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.close {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+}

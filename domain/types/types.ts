@@ -15,3 +15,10 @@ export type TEvent = {
     startAge: string,
     introImage: string,
 }
+
+export type TMessage = {
+    id: number,
+    date: string,
+    text: string,
+    owner: string
+}
