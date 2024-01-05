@@ -26,15 +26,15 @@ const Chat: React.FC<ChatProps> = ({ messages }) => {
         <div className={styles.messages}>
         {messages.map(message =>
             <div style={{ 
-                margin: message.owner === 'support' ? "0" : '0 0 0 calc(100% - 200px)',
-                background: message.owner === 'support' ? '#ECECEE' : '#fff',
-                borderRadius: message.owner === 'support' ? "8px 8px 8px 0px" : '8px 8px 0px 8px'
-            }} 
-            className={styles.message} 
-            key={message.id}
+                    margin: message.owner === 'support' ? "0" : '0 0 0 calc(100% - 200px)',
+                    background: message.owner === 'support' ? '#ECECEE' : '#fff',
+                    borderRadius: message.owner === 'support' ? "8px 8px 8px 0px" : '8px 8px 0px 8px'
+                }} 
+                className={styles.message} 
+                key={message.id}
             >
-            <p>{message.text}</p>
-            <span>{message.date}</span>
+                <p>{message.text}</p>
+                <span>{message.date}</span>
             </div>  
         )}
         </div>
