@@ -17,6 +17,7 @@ export const Header = (): JSX.Element => {
 
     const languages = [
         {
+            id: 0,
             name: 'English',
             icon: <Image src="/icons/en.svg" alt="English" width={20} height={20} priority={true} quality={100} />,
             onSelect: () => {
@@ -24,6 +25,7 @@ export const Header = (): JSX.Element => {
             },
         },
         {
+            id: 1,
             name: 'Русский',
             icon: <Image src="/icons/ru.svg" alt="Russian" width={20} height={20} priority={true} quality={100} />,
             onSelect: () => {
@@ -31,6 +33,7 @@ export const Header = (): JSX.Element => {
             },
         },
         {
+            id: 2,
             name: 'Greek',
             icon: <Image src="/icons/greece.svg" alt="Greece" width={20} height={20} priority={true} quality={100} />,
             onSelect: () => {
@@ -41,16 +44,20 @@ export const Header = (): JSX.Element => {
 
     const dropDownOptions = [
         {
+            id: 0,
             name: "Управление аккаунтом"
         }, 
         {
+            id: 1,
             name: "Мои билеты",
             onSelect: () => router.push('/MyTickets') 
         },
         {
+            id: 2,
             name: "Стать организатором"
         },
         {
+            id: 3,
             name: "Выйти из аккаунта"
         }
     ]

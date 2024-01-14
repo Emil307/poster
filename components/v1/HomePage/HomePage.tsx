@@ -1,9 +1,8 @@
 import React from "react";
 import IntroSlider from "@/components/v1/HomePage/IntroSlider/IntroSlider";
 import DatePickerComponent from "@/components/v1/DatePicker/DatePickerComponent";
-import CategoryEventsList from "@/components/v1/HomePage/CategoryEventsList/CategoryEventsList";
+import CategoryEventsList from "@/components/v1/CategoryEventsList/CategoryEventsList";
 import Support from "@/components/v1/Support/Support";
-import SupportChat from '@/components/v1/Support/Support';
 
 import { THomePageProps } from './types';
 import { HomePageContainer } from './styles'
@@ -21,6 +20,5 @@ export const HomePage = ({ pageTitle }: THomePageProps) => {
         <CategoryEventsList title={translate('ForKidsTitle')}/>
         <CategoryEventsList title={translate('TheatersTitle')}/>
         <Support/>
-        <SupportChat/>
     </HomePageContainer>
 }

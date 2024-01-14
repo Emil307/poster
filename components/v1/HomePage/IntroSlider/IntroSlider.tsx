@@ -15,7 +15,7 @@ import {
     Button
 } from './styles';
 
-import { Title, Info, Tags, Cost } from '@/components/v1/HomePage/CategoryEventCard/styles';
+import { Title, Info, Tags, Cost } from '@/components/v1/CategoryEventCard/styles';
 
 export interface IntroSliderProps {
     items: TEvent[];

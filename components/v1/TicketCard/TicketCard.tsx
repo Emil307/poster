@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Top, ImageContainer, Ticket, Left } from './styles';
-import { Title, Info } from '@/components/v1/HomePage/CategoryEventCard/styles';
+import { Title, Info } from '@/components/v1/CategoryEventCard/styles';
 import { Button } from '@/ui/v1/Button/Button';
 import { TTicket } from '@/domain/types/types';
 import backgroundImage from '@/public/images/default-event-intro.jpg';

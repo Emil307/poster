@@ -17,6 +17,10 @@ const Button = styled.button`
  color: var(--main-black, #000);
 
  transition: .2s ease-in-out;
+
+ @media screen and (max-width: 768px) {
+    height: 48px;
+}
 `
 
 export const PrimaryButton = styled(Button)`

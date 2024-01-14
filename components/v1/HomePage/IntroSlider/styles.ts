@@ -6,7 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     width: 100%;
     max-width: 1512px;
-    margin: 45px auto 0;
+    margin: 113px auto 0;
     overflow-x: hidden;
     
     @media screen and (max-width: 768px) {

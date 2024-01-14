@@ -16,7 +16,7 @@ const DropDown: React.FC<DropDownProps> = ({ button, options }) => {
             <Menu.Items>
                 <div className={styles.items}>
                 {options.map(item => 
-                    <div className={styles.item}>
+                    <div className={styles.item} key={item.id}>
                         <Menu.Item>
                             <button onClick={item.onSelect} className={styles.button}>{item.name}</button>
                         </Menu.Item>

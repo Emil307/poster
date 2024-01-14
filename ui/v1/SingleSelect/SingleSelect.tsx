@@ -4,6 +4,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import styles from './styles.module.scss';
 
 export type TOption = {
+ id: number;
  name: string;
  icon?: React.ReactElement;
  onSelect?: () => void;

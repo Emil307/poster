@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { events } from '@/data/events';
-import CategoryEventCard from '@/components/v1/HomePage/CategoryEventCard/CategoryEventCard';
+import CategoryEventCard from '@/components/v1/CategoryEventCard/CategoryEventCard';
 import { Container, Header, Info, EventsCount, Arrows, Events } from './styles';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
