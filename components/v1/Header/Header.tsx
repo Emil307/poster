@@ -71,7 +71,10 @@ export const Header = (): JSX.Element => {
                 <AutoCompleteInput />
             </Left>
             <Right>
-                <SingleSelect options={languages} defaultSelected={locale === 'en' ? languages[0] : locale === 'ru' ? languages[1] : languages[2]} />
+                <SingleSelect
+                    options={languages}
+                    defaultSelected={locale === 'en' ? languages[0] : locale === 'ru' ? languages[1] : languages[2]}
+                />
                 {isAuthorized ?
                     <DropDown 
                         button={
