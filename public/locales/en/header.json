@@ -1,4 +1,8 @@
 {
     "Artist, venue, event": "Artist, venue, event",
-    "Login": "Login"
+    "Login": "Login",
+    "Account Management": "Account Management",
+    "My tickets": "My tickets",
+    "Become an organizer": "Become an organizer",
+    "Logout": "Logout"
 }

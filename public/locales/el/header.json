@@ -1,4 +1,8 @@
 {
     "Artist, venue, event": "Καλλιτέχνης, χώρος, εκδήλωση",
-    "Login": "Σύνδεση"
+    "Login": "Σύνδεση",
+    "Account Management": "Διαχείριση λογαριασμών",
+    "My tickets": "Τα εισιτήριά μου",
+    "Become an organizer": "Γίνε διοργανωτής",
+    "Logout": "Αποσύνδεση"
 }

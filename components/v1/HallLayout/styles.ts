@@ -28,7 +28,7 @@ export const HallContainer = styled.div`
     margin-top: 8px;
 `; 
 
-export const Tickets = styled.div`
+export const TicketsCost = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -37,7 +37,7 @@ export const Tickets = styled.div`
     background: var(--addable-grey);
 `;
 
-export const Ticket = styled.div`
+export const TicketCost = styled.div`
     width: max-content;
     display: flex;
     align-items: center;
@@ -54,6 +54,7 @@ export const ZoneColor = styled.div`
 `;
 
 export const Hall = styled.div`
+    position: relative;
     width: 100%;
     max-width: calc(100% - 150px - 8px);
     display: flex;
@@ -74,9 +75,7 @@ export const Scene = styled.div``;
 
 export const Places = styled.div`
     display: flex;
-    width: 790px;
-    height: 260px;
-    gap: 48px;
+    justify-content: space-between;
     margin-top: 16px;
     padding: 12px;
     border-radius: 24px;
@@ -85,10 +84,53 @@ export const Places = styled.div`
 
 export const Zone = styled.div`
     display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 32px);
+    grid-template-rows: repeat(8, 32px);
+`;
+
+export const SelectedTicketsContainer = styled.div`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 150px - 8px);
+    height: 107px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: var(--main-white);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+`;
+
+export const SelectedTickets = styled.div`
+    display: flex;
+    width: fit-content;
+    height: 107px;
+    max-content: calc(100% - 24px);
+    flex-wrap: wrap;
+    gap: 24px;
+    overflow: auto;
+    padding: 20px 0;
+`;
+
+export const SelectedTicketsRigth = styled.div`
+    width: 264px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+`;
+
+
+export const SelectedTicketsInfo = styled.div`
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+`;
+
+export const SelectedTicketsCost = styled.h3`
+    font-size: 20px;
 `;
 
 export const Buttons = styled.button`
@@ -100,7 +142,7 @@ export const Buttons = styled.button`
     gap: 16px;
 `;
 
-export const Button = styled.button`
+export const HallButton = styled.button`
     width: 56px;
     height: 56px;
     border-radius: 50%;

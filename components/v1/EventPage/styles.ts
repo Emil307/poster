@@ -251,7 +251,7 @@ export const MapAbout = styled.div`
 `;
 
 export const Right = styled.div`
-    width: 203px;
+    width: 283px;
 
     @media screen and (max-width: 768px) {
         width: 100%;

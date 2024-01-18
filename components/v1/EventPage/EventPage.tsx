@@ -38,6 +38,7 @@ import {
 import { Button } from '@/ui/v1/Button/Button';
 import backgroundImage from '@/public/images/default-event.jpg';
 import Support from '@/components/v1/Support/Support';
+import { useTranslation } from "next-i18next";
 
 export interface EventPageProps {
   event: TEvent;
@@ -47,6 +48,7 @@ export const EventPage: React.FC<EventPageProps> = () => {
   const router = useRouter();
   const { id } = router.query;
   const event = events[Number(id)];
+  const { t: translate } = useTranslation('eventPage'); 
 
   return (
     <div>
@@ -63,7 +65,7 @@ export const EventPage: React.FC<EventPageProps> = () => {
           <Title>NIF23 - THE LOVE OF DON PERLIMPLÍN AND BELISA IN THE GARDEN by Federico García Lorca</Title>
           <SubTitle>November 14 • ETKO HANGAR</SubTitle>
           <Buttons>
-            <Button>To buy tickets</Button>
+            <Button>{translate('To buy tickets')}</Button>
             <FavoriteButton>
               <Image src='/icons/favorites-black.svg' alt='add to favorites' width={24} height={24} priority={true}/>
             </FavoriteButton>
@@ -75,14 +77,14 @@ export const EventPage: React.FC<EventPageProps> = () => {
       </Intro>
       <Container>
         <AboutSection>
-          <h2 style={{ textAlign: 'left' }}>About the event</h2>
+          <h2 style={{ textAlign: 'left' }}>{translate('About the event')}</h2>
           <p>
             A classical music concert performed by two young musicians. They will perform such familiar hits as “On the Titanic”, “Loneliness”, “CRYSTAL MOET” and others
           </p>
         </AboutSection>
 
         <ScheduleSection>
-          <h2 style={{ textAlign: 'left' }}>Schedule and tickets</h2>
+          <h2 style={{ textAlign: 'left' }}>{translate('Schedule and tickets')}</h2>
           <ScheduleItem>
             <EventDate>
               <p>W</p>
@@ -95,8 +97,8 @@ export const EventPage: React.FC<EventPageProps> = () => {
                 <Place>ETKO HANGAR</Place>
               </TicketInfo>
               <TicketBuy>
-                <Cost>from 1000 R</Cost>
-                <Button>To buy tickets</Button>
+                <Cost>{translate('from')} 1000 {translate('R')}</Cost>
+                <Button>{translate('To buy tickets')}</Button>
               </TicketBuy>
             </Ticket>
           </ScheduleItem>
@@ -112,26 +114,26 @@ export const EventPage: React.FC<EventPageProps> = () => {
                 <Place>ETKO HANGAR</Place>
               </TicketInfo>
               <TicketBuy>
-                <Cost>from 1000 R</Cost>
-                <Button>To buy tickets</Button>
+                <Cost>{translate('from')} 1000 {translate('R')}</Cost>
+                <Button>{translate('To buy tickets')}</Button>
               </TicketBuy>
             </Ticket>
           </ScheduleItem>
         </ScheduleSection>
 
         <DetailsSection>
-          <h2 style={{ textAlign: 'left' }}>More details</h2>
+          <h2 style={{ textAlign: 'left' }}>{translate('More details')}</h2>
           <Details>
             <Detail>
-              <h3>Event</h3>
+              <h3>{translate('Event')}</h3>
               <p>Concert</p>
             </Detail>
             <Detail>
-              <h3>Genre</h3>
+              <h3>{translate('Genre')}</h3>
               <p>Classical music</p>
             </Detail>
             <Detail>
-              <h3>Age</h3>
+              <h3>{translate('Age')}</h3>
               <p>12+</p>
             </Detail>
             <Detail>
@@ -139,11 +141,11 @@ export const EventPage: React.FC<EventPageProps> = () => {
               <p>Eng</p>
             </Detail>
             <Detail>
-              <h3>Place</h3>
+              <h3>{translate('Place')}</h3>
               <p>ETKO HANGAR</p>
             </Detail>
             <Detail>
-              <h3>Duration</h3>
+              <h3>{translate('Duration')}</h3>
               <p>2 hours</p>
             </Detail>
           </Details>
@@ -154,22 +156,22 @@ export const EventPage: React.FC<EventPageProps> = () => {
       <MapSection>
         <MapHeader>
             <MapInfo>
-              <MapTitle>How to get there</MapTitle>
+              <MapTitle>{translate('How to get there')}</MapTitle>
               <MapAbout>
                 <p>ETKO HANGAR</p>
                 <p>Boulevard Ashei, 45</p>
               </MapAbout>
             </MapInfo>
             <Right>
-              <Button>View on map</Button>
+              <Button>{translate('View on map')}</Button>
             </Right>
         </MapHeader>
         <Map src="https://maps.google.com/maps?width=100%25&amp;height=248&amp;hl=en&amp;q=Mouseiou%201,%20Nicosia%201097,%20Cyprus+(MYTICKET)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
           <a href="https://www.maps.ie/population/">Calculate population in area</a>
         </Map>
       </MapSection>
-      <CategoryEventsList title='Recently watched'/>
-      <CategoryEventsList title='May like'/>
+      <CategoryEventsList title={translate('Recently watched')}/>
+      <CategoryEventsList title={translate('May like')}/>
       <Support/>
     </div>
   )

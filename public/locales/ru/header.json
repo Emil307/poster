@@ -1,4 +1,8 @@
 {
     "Artist, venue, event": "Артист, площадка, мероприятие",
-    "Login": "Войти"
+    "Login": "Войти",
+    "Account Management": "Управление аккаунтом",
+    "My tickets": "Мои билеты",
+    "Become an organizer": "Стать организатором",
+    "Logout": "Выйти из аккаунта"
 }

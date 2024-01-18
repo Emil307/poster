@@ -45,20 +45,36 @@ export const Header = (): JSX.Element => {
     const dropDownOptions = [
         {
             id: 0,
-            name: "Управление аккаунтом"
+            name: 
+                locale === 'en' ? "Account Management" :
+                locale === 'ru' ? 'Управление аккаунтом' :
+                locale === 'el' ? 'Διαχείριση λογαριασμών' :
+                "Account Management",
         }, 
         {
             id: 1,
-            name: "Мои билеты",
+            name: 
+                locale === 'en' ? "My tickets" :
+                locale === 'ru' ? 'Мои билеты' :
+                locale === 'el' ? 'Τα εισιτήριά μου' :
+                "My tickets",
             onSelect: () => router.push('/MyTickets') 
         },
         {
             id: 2,
-            name: "Стать организатором"
+            name: 
+                locale === 'en' ? "Become an organizer" :
+                locale === 'ru' ? 'Стать организатором' :
+                locale === 'el' ? 'Γίνε διοργανωτής' :
+                "Become an organizer",
         },
         {
             id: 3,
-            name: "Выйти из аккаунта"
+            name: 
+                locale === 'en' ? "Logout" :
+                locale === 'ru' ? 'Выйти из аккаунта' :
+                locale === 'el' ? 'Αποσύνδεση' :
+                "Logout",
         }
     ]
 

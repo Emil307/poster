@@ -3,22 +3,34 @@ import {
     Container,
     InfoContainer,
     HallContainer,
-    Tickets,
-    Ticket,
+    TicketsCost,
+    TicketCost,
     ZoneColor,
     Hall,
     Schema,
     Scene,
     Places,
     Zone,
+    SelectedTicketsContainer,
+    SelectedTickets,
+    SelectedTicketsRigth,
+    SelectedTicketsInfo,
+    SelectedTicketsCost,
     Buttons,
-    Button
+    HallButton
 } from './styles';
 import Image from 'next/image';
 import PlaceButton from '@/components/v1/HallLayout/PlaceButton/PlaceButton';
 import { places } from '@/data/places';
+import { useTranslation } from "next-i18next";
+import selectedPlacesState from '@/store/selectedPlacesState';
+import { observer } from 'mobx-react-lite';
+import { Button } from '@/ui/v1/Button/Button';
+import TicketSelected from '@/components/v1/HallLayout/TicketSelected/TicketSelected';
+import Link from 'next/link';
 
-const HallLayout = () => {
+const HallLayout = observer(() => {
+    const { t: translate } = useTranslation('eventPage'); 
     const [zoom, setZoom] = useState(1.0);
 
     function zoomIncrease() {
@@ -35,26 +47,26 @@ const HallLayout = () => {
 
   return (
     <Container>
-        <h2>Схема зала</h2>
+        <h2>{translate('Hall scheme')}</h2>
         <InfoContainer>
             <h3>NIF23 - THE LOVE OF DON PERLIMPLÍN AND BELISA IN THE GARDEN by Federico García Lorca</h3>
             <p style={{ opacity: '0.7' }}>14 ноября • ETKO HANGAR</p>
         </InfoContainer>
         <HallContainer>
-            <Tickets>
-                <Ticket>
+            <TicketsCost>
+                <TicketCost>
                     <ZoneColor style={{ background: 'red' }} />
                     <h3>5000 Р</h3>
-                </Ticket>
-                <Ticket>
+                </TicketCost>
+                <TicketCost>
                     <ZoneColor style={{ background: 'red' }} />
                     <h3>5000 Р</h3>
-                </Ticket>
-                <Ticket>
+                </TicketCost>
+                <TicketCost>
                     <ZoneColor style={{ background: 'red' }} />
                     <h3>5000 Р</h3>
-                </Ticket>
-            </Tickets>
+                </TicketCost>
+            </TicketsCost>
             <Hall>
                 <Schema>
                     <Scene style={{ zoom: zoom }}>
@@ -69,8 +81,7 @@ const HallLayout = () => {
                                 {place.zone === 'left' &&
                                     <PlaceButton
                                         color={place.color}
-                                        disabled={place.disabled}
-                                        selected={false}
+                                        place={place}
                                         key={place.id}
                                     />
                                 }
@@ -83,8 +94,7 @@ const HallLayout = () => {
                                 {place.zone === 'center' &&
                                     <PlaceButton
                                         color={place.color}
-                                        disabled={place.disabled}
-                                        selected={false}
+                                        place={place}
                                         key={place.id}
                                     />
                                 }
@@ -97,8 +107,7 @@ const HallLayout = () => {
                                 {place.zone === 'right' &&
                                     <PlaceButton
                                         color={place.color}
-                                        disabled={place.disabled}
-                                        selected={false}
+                                        place={place}
                                         key={place.id}
                                     />
                                 }
@@ -108,17 +117,35 @@ const HallLayout = () => {
                     </Places>
                 </Schema>
             </Hall>
+            {selectedPlacesState.places.length > 0 &&
+                <SelectedTicketsContainer>
+                    <SelectedTickets>
+                        {selectedPlacesState.places.map(place => 
+                            <TicketSelected ticket={place}/>
+                        )}
+                    </SelectedTickets>
+                    <SelectedTicketsRigth>
+                        <SelectedTicketsInfo>
+                            <p>{selectedPlacesState.places.length} билет</p>
+                            <SelectedTicketsCost>{selectedPlacesState.costSum} Р</SelectedTicketsCost>
+                        </SelectedTicketsInfo>
+                        <Link href='/TicketProcessing'>
+                            <Button width='144px'>Далее</Button>
+                        </Link>
+                    </SelectedTicketsRigth>
+                </SelectedTicketsContainer>
+            }
             <Buttons>
-                <Button onClick={zoomIncrease}>
+                <HallButton onClick={zoomIncrease}>
                     <Image src='/icons/plus.svg' alt='bring closer' width={24} height={24} priority={true}/>
-                </Button>
-                <Button onClick={zoomReduce}>
+                </HallButton>
+                <HallButton onClick={zoomReduce}>
                     <Image src='/icons/minus.svg' alt='move away' width={24} height={24} priority={true}/>
-                </Button>
+                </HallButton>
             </Buttons>
         </HallContainer>
     </Container>
   )
-}
+});
 
 export default HallLayout;

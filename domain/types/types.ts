@@ -22,3 +22,13 @@ export type TMessage = {
     text: string,
     owner: string
 }
+
+export type TPlace = {
+    id: number,
+    row: number,
+    column: number,
+    zone: string,
+    cost: number,
+    color: string,
+    disabled: boolean,
+}
