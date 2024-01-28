@@ -6,7 +6,7 @@ export const Container = styled.div`
     margin: 0 auto;
 
     @media screen and (max-width: 768px) {
-        display: none;
+        max-width: 343px;
     }
 `;
 
@@ -26,7 +26,11 @@ export const HallContainer = styled.div`
     height: 512px; 
     gap: 8px;
     margin-top: 8px;
-`; 
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column; 
+    }
+`;  
 
 export const TicketsCost = styled.div`
     display: flex;
@@ -35,6 +39,11 @@ export const TicketsCost = styled.div`
     padding: 16px;
     border-radius: 24px;
     background: var(--addable-grey);
+
+    @media screen and (max-width: 768px) {
+        flex-direction: row;
+        overflow: auto;
+    }
 `;
 
 export const TicketCost = styled.div`
@@ -45,6 +54,7 @@ export const TicketCost = styled.div`
     padding: 12px;
     border-radius: 32px;
     background: var(--main-white);
+    white-space: nowrap;
 `;
 
 export const ZoneColor = styled.div`
@@ -67,9 +77,18 @@ export const Hall = styled.div`
     &::-webkit-scrollbar {
         display: none;
     }
+
+    @media screen and (max-width: 768px) {
+        max-width: 343px;
+        height: 460px;
+    }
 `;
 
-export const Schema = styled.div``;
+export const Schema = styled.div`
+    @media screen and (max-width: 768px) {
+        max-width: 343px;
+    }
+`;
 
 export const Scene = styled.div``;
 
@@ -80,6 +99,7 @@ export const Places = styled.div`
     padding: 12px;
     border-radius: 24px;
     background: var(--main-white);
+    width: 776px;
 `;
 
 export const Zone = styled.div`
@@ -101,6 +121,17 @@ export const SelectedTicketsContainer = styled.div`
     background: var(--main-white);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 32px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        width : 100%;
+        border-radius: 16px;
+        padding: 0 20px;
+        overflow: auto;
+        height: 180px;
+    }
 `;
 
 export const SelectedTickets = styled.div`
@@ -112,6 +143,15 @@ export const SelectedTickets = styled.div`
     gap: 24px;
     overflow: auto;
     padding: 20px 0;
+
+    @media screen and (max-width: 768px) {
+        flex-wrap: no-wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        height: 86px;
+        padding: 16px 0;
+    }
 `;
 
 export const SelectedTicketsRigth = styled.div`
@@ -119,6 +159,10 @@ export const SelectedTicketsRigth = styled.div`
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 
@@ -140,6 +184,10 @@ export const Buttons = styled.button`
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media screen and (max-width: 768px) {
+        top: calc(50% - 56px - 8px);
+    }
 `;
 
 export const HallButton = styled.button`

@@ -28,6 +28,7 @@ import { CheckBox } from '@/ui/v1/CheckBox/CheckBox';
 import { Button } from '@/ui/v1/Button/Button';
 import { Alert } from '@/ui/v1/Alert/Alert';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export const TicketProcessingPage: React.FC = () => {
     const router = useRouter();
@@ -102,6 +103,13 @@ export const TicketProcessingPage: React.FC = () => {
                 <Title>Проверьте заказ</Title>
                 <CheckContainer>
                     <Alert>
+                        <Image
+                            src='/icons/alert.svg'
+                            alt='alert'
+                            width={24}
+                            height={24}
+                            priority={true}
+                        />
                         <AlertContent>
                             <p>Билеты забронированы за вами на ближайшие <span>5 минут</span></p>
                             <p>Если в течение этого времени вы не оплатите, бронь будет снята, а заказ аннулирован</p>

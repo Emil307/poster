@@ -50,6 +50,7 @@ export const Header = (): JSX.Element => {
                 locale === 'ru' ? 'Управление аккаунтом' :
                 locale === 'el' ? 'Διαχείριση λογαριασμών' :
                 "Account Management",
+            onSelect: () => router.push('/Profile')
         }, 
         {
             id: 1,

@@ -3,6 +3,7 @@ import IntroSlider from "@/components/v1/HomePage/IntroSlider/IntroSlider";
 import DatePickerComponent from "@/components/v1/DatePicker/DatePickerComponent";
 import CategoryEventsList from "@/components/v1/CategoryEventsList/CategoryEventsList";
 import Support from "@/components/v1/Support/Support";
+import { Tabs } from "@/ui/v1/Tabs/Tabs";
 
 import { THomePageProps } from './types';
 import { HomePageContainer } from './styles'

@@ -40,7 +40,7 @@ const HallLayout = observer(() => {
     }
 
     function zoomReduce() {
-        if (zoom >= 0.8) {
+        if (zoom >= 0.6) {
             setZoom(zoom - 0.2);
         }
     }

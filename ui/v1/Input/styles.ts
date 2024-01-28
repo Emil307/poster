@@ -18,18 +18,18 @@ export const InputStyled = styled.input`
   border-radius: 8px;
  }
 
- &:invalid {
-  background-color: var(--addable-red-bg);
-  border: 1px var(--addable-red) solid;
- }
+//  &:invalid {
+//   background-color: var(--addable-red-bg);
+//   border: 1px var(--addable-red) solid;
+//  }
 
- &:invalid::-moz-placeholder {
-  color: var(--addable-red);
- }
+//  &:invalid::-moz-placeholder {
+//   color: var(--addable-red);
+//  }
 
- &:invalid::-webkit-input-placeholder {
-  color: var(--addable-red);
- }
+//  &:invalid::-webkit-input-placeholder {
+//   color: var(--addable-red);
+//  }
 
  &[disabled] {
   background-color: var(--addable-grey);

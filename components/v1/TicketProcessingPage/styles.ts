@@ -135,7 +135,7 @@ export const Service = styled.div`
 
     & > * {
         color: var(--addable-dark-grey);
-        white-space: nowrap
+        white-space: nowrap;
     }
 `;
 

@@ -32,3 +32,11 @@ export type TPlace = {
     color: string,
     disabled: boolean,
 }
+
+export type TUser = {
+    email: string;
+    name?: string;
+    surname?: string;
+    password1: string;
+    password2: string;
+}
