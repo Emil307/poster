@@ -5,6 +5,12 @@ export const Form = styled.div`
     display: flex;
     gap: 16px;
     margin: 32px auto 56px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 24px;
+        margin: 24px auto 56px;
+    }
 `;
 
 export const Left = styled.div`
@@ -22,6 +28,11 @@ export const PhotoButton = styled.button`
     height: 190px;
     border-radius: 50%;
     background: var(--main-white);
+
+    @media screen and (max-width: 768px) {
+        width: 109px;
+        height: 109px;
+    }
 `;
 
 export const AddPhotoText = styled.p`
@@ -35,6 +46,10 @@ export const Right = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media screen and (max-width: 768px) {
+        width: 343px;
+    }
 `;
 
 export const ButtonsWrapper = styled.div`

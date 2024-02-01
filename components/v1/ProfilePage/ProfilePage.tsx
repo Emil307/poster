@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Content } from './styles';
+import { Container, Content, AlertTitle, ButtonWrapper } from './styles';
 import { Alert } from '@/ui/v1/Alert/Alert';
 import { Button } from '@/ui/v1/Button/Button';
 import { Tabs } from '@/ui/v1/Tabs/Tabs';
@@ -36,10 +36,12 @@ export const ProfilePage: React.FC = () => {
     <Container>
       <Alert>
         <div>
-          <h2>You haven't confirmed your email</h2>
+          <AlertTitle>You haven't confirmed your email</AlertTitle>
           <p>We will send you a 5-digit code to confirm the validity of your email</p>
         </div>
-        <Button width='181px'>Send code</Button>
+        <ButtonWrapper>
+          <Button>Send code</Button>
+        </ButtonWrapper>
       </Alert>
       <Content>
         <Tabs tabs={tabs} contents={contents}/>

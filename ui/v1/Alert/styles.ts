@@ -8,4 +8,8 @@ export const Container = styled.div`
     border-radius: 16px;
     border: 1px solid var(--main-yellow);
     background: var(--addable-yellow);
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `; 

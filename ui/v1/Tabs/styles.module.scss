@@ -37,5 +37,13 @@
 @media screen and (max-width: 768px) {
     .toggle {
         margin: 0 auto 40px;
+        width: 343px;
+        flex-direction: column;
+    }
+    .selected {
+        width: 100%;
+    }
+    .default {
+        width: 100%;
     }
 }

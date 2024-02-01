@@ -17,7 +17,7 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, contents }) => {
   const { t: translate } = useTranslation('ticketsPage');
 
   return (
-    <>
+    <div className={styles.container}>
       <Tab.Group>
         <div className={styles.toggle}>
           <Tab.List>
@@ -42,6 +42,6 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, contents }) => {
           )}
         </Tab.Panels>
       </Tab.Group>
-    </>
+    </div>
   )
 }
