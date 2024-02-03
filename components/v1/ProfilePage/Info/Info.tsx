@@ -4,8 +4,11 @@ import { Label } from '@/ui/v1/Label/Label';
 import { Input } from '@/ui/v1/Input/Input';
 import { Button } from '@/ui/v1/Button/Button';
 import Image from 'next/image';
+import { useTranslation } from "next-i18next";
 
 export const Info: React.FC = () => {
+    const { t: translate } = useTranslation('profile'); 
+
     const [names, setNames] = useState('Ivan Ivanov');
     const [email, setEmail] = useState('expample@gmail.com');
     const [phone, setPhone] = useState('+7 980 785 78 87');
@@ -22,7 +25,7 @@ export const Info: React.FC = () => {
 
   return (
     <div>
-        <h1>Basic information</h1>
+        <h1>{translate(`Basic information`)}</h1>
         <Form>
             <Left>
                 <PhotoButton>
@@ -34,11 +37,11 @@ export const Info: React.FC = () => {
                         priority={true}
                     />
                 </PhotoButton>
-                <AddPhotoText>Add photo</AddPhotoText>
+                <AddPhotoText>{translate(`Add photo`)}</AddPhotoText>
             </Left>
             <Right>
                 <Label>
-                    <span>First and last name</span>
+                    <span>{translate(`First and last name`)}</span>
                     <Input 
                         type='text'
                         value={names}
@@ -46,7 +49,7 @@ export const Info: React.FC = () => {
                     />
                 </Label>
                 <Label>
-                    <span>Email</span>
+                    <span>{translate(`Email`)}</span>
                     <Input 
                         type='email'
                         value={email}
@@ -54,7 +57,7 @@ export const Info: React.FC = () => {
                     />
                 </Label>
                 <Label>
-                    <span>Telephone</span>
+                    <span>{translate(`Telephone`)}</span>
                     <Input 
                         type='phone'
                         value={phone}
@@ -62,7 +65,7 @@ export const Info: React.FC = () => {
                     />
                 </Label>
                 <Label>
-                    <span>Date of Birth</span>
+                    <span>{translate(`Date of Birth`)}</span>
                     <Input 
                         type='text'
                         value={date}
@@ -70,7 +73,7 @@ export const Info: React.FC = () => {
                     />
                 </Label>
                 <Label>
-                    <span>Address</span>
+                    <span>{translate(`Address`)}</span>
                     <Input 
                         type='text'
                         value={address}
@@ -78,13 +81,13 @@ export const Info: React.FC = () => {
                     />
                 </Label>
                 <ButtonsWrapper>
-                    <Button>Save changes</Button>
+                    <Button>{translate(`Save changes`)}</Button>
                     <Button
                         type='button'
                         styleType='tertiary'
                         onClick={handleReset}
                     >
-                        Reset changes
+                        {translate(`Reset changes`)}
                     </Button>
                 </ButtonsWrapper>
             </Right>

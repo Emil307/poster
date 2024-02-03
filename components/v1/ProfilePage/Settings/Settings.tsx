@@ -3,10 +3,12 @@ import Image from "next/image";
 import { useRouter } from 'next/router';
 import { SingleSelect } from "@/ui/v1/SingleSelect/SingleSelect";
 import { Content, Select, SelectTitle } from './styles';
+import { useTranslation } from "next-i18next";
 
 export const Settings: React.FC = () => {
   const { push, locale } = useRouter();
   const router = useRouter()
+  const { t: translate } = useTranslation('profile'); 
 
   const languages = [
     {
@@ -37,10 +39,10 @@ export const Settings: React.FC = () => {
 
   return (
     <div>
-        <h1>Language and location</h1>
+        <h1>{translate(`Language and location`)}</h1>
         <Content>
           <Select>
-            <SelectTitle>Language</SelectTitle>
+            <SelectTitle>{translate(`Language`)}</SelectTitle>
             <SingleSelect
               options={languages}
               defaultSelected={locale === 'en' ? languages[0] : locale === 'ru' ? languages[1] : languages[2]}

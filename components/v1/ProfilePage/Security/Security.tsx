@@ -3,18 +3,20 @@ import { Label } from '@/ui/v1/Label/Label';
 import { Input } from '@/ui/v1/Input/Input';
 import { Button } from '@/ui/v1/Button/Button';
 import { Form, ButtonWrapper } from './styles';
+import { useTranslation } from "next-i18next";
 
 export const Security: React.FC = () => {
     const [oldPassword, setOldPassword] = useState(''); 
     const [newPassword, setNewPassword] = useState('');
     const [newPasswordRepeat, setNewPasswordRepeat] = useState('');
+    const { t: translate } = useTranslation('profile'); 
 
   return (
     <div>
-        <h1>Password and safety</h1>
+        <h1>{translate(`Password and safety`)}</h1>
         <Form>  
             <Label>
-                <span>Old Password</span>
+                <span>{translate(`Old Password`)}</span>
                 <Input 
                     type='password'
                     value={oldPassword}
@@ -22,7 +24,7 @@ export const Security: React.FC = () => {
                 />
             </Label>
             <Label>
-                <span>New Password</span>
+                <span>{translate(`New Password`)}</span>
                 <Input 
                     type='password'
                     value={newPassword}
@@ -30,7 +32,7 @@ export const Security: React.FC = () => {
                 />
             </Label>
             <Label>
-                <span>Repeat new password</span>
+                <span>{translate(`Repeat new password`)}</span>
                 <Input 
                     type='password'
                     value={newPasswordRepeat}
@@ -41,7 +43,7 @@ export const Security: React.FC = () => {
                 <Button
                     styleType='tertiary'
                 >
-                    Save changes
+                    {translate(`Save changes`)}
                 </Button>
             </ButtonWrapper>
         </Form>

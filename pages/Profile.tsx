@@ -11,7 +11,7 @@ const ProfileNextPage = () => {
 export async function getStaticProps({ locale }: any) {
   return {
       props: {
-          ... (await serverSideTranslations(locale, ['index', 'header', 'footer', 'support'])),
+          ... (await serverSideTranslations(locale, ['profile', 'header', 'footer', 'support'])),
       },
   }
 }

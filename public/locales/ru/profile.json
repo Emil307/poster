@@ -1,0 +1,21 @@
+{
+    "You haven't confirmed your email": "Вы не подтвердили свою почту",
+    "We will send you a 5-digit code to confirm the validity of your email": "Отправим вам 5-ти значный код для подтверждения действительности вашей почты",
+    "Send code": "Отправить код",
+    "Basic information": "Основная информация",
+    "Language and location": "Язык и локация",
+    "Password and safety": "Пароль и безопасность",
+    "First and last name": "Имя и фамилия",
+    "Email": "E-mail",
+    "Telephone": "Телефон",
+    "Date of Birth": "Дата рождения",
+    "Address": "Адрес",
+    "Add photo": "Добавить фото",
+    "Save changes": "Сохранить изменения",
+    "Reset changes": "Сбросить изменения",
+    "Event location": "Локация событий",
+    "Language": "Язык",
+    "Old Password": "Старый пароль",
+    "New Password": "Новый пароль",
+    "Repeat new password": "Повторите новый пароль"
+}

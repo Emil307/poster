@@ -1,0 +1,21 @@
+{
+    "You haven't confirmed your email": "Δεν έχετε επιβεβαιώσει το email σας",
+    "We will send you a 5-digit code to confirm the validity of your email": "Θα σας στείλουμε έναν 5ψήφιο κωδικό για να επιβεβαιώσουμε την εγκυρότητα του email σας",
+    "Send code": "Στέλνω κωδικό",
+    "Basic information": "Βασικές πληροφορίες",
+    "Language and location": "Γλώσσα και τοποθεσία",
+    "Password and safety": "κωδικό πρόσβασης και ασφάλεια",
+    "First and last name": "Όνομα και επίθετο",
+    "Email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ",
+    "Telephone": "Τηλέφωνο",
+    "Date of Birth": "Ημερομηνια γεννησης",
+    "Address": "Διεύθυνση",
+    "Add photo": "Προσθήκη φωτογραφίας",
+    "Save changes": "Αποθήκευσε τις αλλαγές",
+    "Reset changes": "Επαναφορά αλλαγών",
+    "Event location": "Τοποθεσία εκδήλωσης",
+    "Language": "Γλώσσα",
+    "Old Password": "ΠΑΛΙΟΣ ΚΩΔΙΚΟΣ",
+    "New Password": "Νέος Κωδικός",
+    "Repeat new password": "Επανάληψη νέου κωδικού πρόσβασης"
+}
