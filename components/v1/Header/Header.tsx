@@ -10,7 +10,7 @@ import { useTranslation } from "next-i18next";
 import DropDown from "@/ui/v1/DropDown/DropDown";
 
 export const Header = (): JSX.Element => {
-    const [isAuthorized, setIsAuthorized] = useState(true);
+    const [isAuthorized, setIsAuthorized] = useState(false);
     const { push, locale } = useRouter();
     const router = useRouter()
     const { t: translate } = useTranslation('header'); 

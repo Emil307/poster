@@ -7,6 +7,7 @@ import { LinkStyled } from '@/ui/v1/Link/Link';
 import { Button } from '@/ui/v1/Button/Button';
 import { getUser } from '@/api/auth';
 import Loader from '@/ui/v1/Loader/Loader';
+import { useTranslation } from "next-i18next";
 
 export const SignInPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -14,6 +15,7 @@ export const SignInPage: React.FC = () => {
   const [emailError, setEmailError] = useState(false);
   const [passswordError, setPasswordError] = useState(false);
   const [isAwaiting, setIsAwaiting] = useState(false);
+  const { t: translate } = useTranslation('signIn'); 
 
   function handleSubmit(event: any) {
     event.preventDefault();
@@ -54,10 +56,10 @@ export const SignInPage: React.FC = () => {
 
   return (
     <form onSubmit={event => handleSubmit(event)}> 
-      <h1 style={{ textAlign: "center" }}>Вход</h1>
+      <h1 style={{ textAlign: "center" }}>{translate('Log in')}</h1>
       <InputsWrapper>
         <Label>
-          <span>E-mail</span>
+          <span>{translate('Email')}</span>
           <Input 
             isInvalid={emailError ? true : false}
             type='E-mail'
@@ -65,11 +67,11 @@ export const SignInPage: React.FC = () => {
             onChange={e => setEmail(e.target.value)}
           />
           {emailError && 
-            <span style={{ color: 'var(--addable-red)' }}>Проверьте правильность заполнения</span>
+            <span style={{ color: 'var(--addable-red)' }}>{translate('Check that you have filled it in correctly')}</span>
           }
         </Label>
         <Label>
-          <span>Пароль</span>
+          <span>{translate('Password')}</span>
           <Input
             isInvalid={passswordError ? true : false}
             type='password'
@@ -77,10 +79,10 @@ export const SignInPage: React.FC = () => {
             onChange={e => setPassword(e.target.value)}
           />
           {passswordError && 
-            <span style={{ color: 'var(--addable-red)' }}>Проверьте правильность заполнения</span>
+            <span style={{ color: 'var(--addable-red)' }}>{translate('Check that you have filled it in correctly')}</span>
           }
         </Label>
-        <LinkStyled href="/RecoveryPassword">Не помню пароль</LinkStyled>
+        <LinkStyled href="/RecoveryPassword">{translate('I do not remember the password')}</LinkStyled>
       </InputsWrapper>
       <ButtonsWrapper>
         <Button
@@ -88,9 +90,9 @@ export const SignInPage: React.FC = () => {
           type='submit'
           styleType='primary'
         >
-          {isAwaiting ? <Loader/> : <>Войти</>}
+          {isAwaiting ? <Loader/> : <>{translate('LoginButton')}</>}
         </Button>
-        <Link href='/SignUp'><Button type='button' styleType='secondary'>Новый аккаунт</Button></Link>
+        <Link href='/SignUp'><Button type='button' styleType='secondary'>{translate('New account')}</Button></Link>
       </ButtonsWrapper>
     </form>
   )
