@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Container, Content, Left, Right } from "./styles";
@@ -11,6 +11,11 @@ import DropDown from "@/ui/v1/DropDown/DropDown";
 
 export const Header = (): JSX.Element => {
     const [isAuthorized, setIsAuthorized] = useState(false);
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            setIsAuthorized(true);
+        }
+    }, [])
     const { push, locale } = useRouter();
     const router = useRouter()
     const { t: translate } = useTranslation('header'); 
@@ -76,6 +81,11 @@ export const Header = (): JSX.Element => {
                 locale === 'ru' ? 'Выйти из аккаунта' :
                 locale === 'el' ? 'Αποσύνδεση' :
                 "Logout",
+                onSelect: () => {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user');
+                    location.reload();
+                }
         }
     ]
 

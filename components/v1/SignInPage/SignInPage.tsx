@@ -5,7 +5,7 @@ import { Label } from '@/ui/v1/Label/Label';
 import { Input } from '@/ui/v1/Input/Input';
 import { LinkStyled } from '@/ui/v1/Link/Link';
 import { Button } from '@/ui/v1/Button/Button';
-import { getUser } from '@/api/auth';
+import { login, getUser } from '@/api/auth';
 import Loader from '@/ui/v1/Loader/Loader';
 import { useTranslation } from "next-i18next";
 
@@ -14,6 +14,7 @@ export const SignInPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState(false);
   const [passswordError, setPasswordError] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [isAwaiting, setIsAwaiting] = useState(false);
   const { t: translate } = useTranslation('signIn'); 
 
@@ -32,9 +33,19 @@ export const SignInPage: React.FC = () => {
     }
 
     if (email && password) {
-      getUser(email, password)
-        .then(({ data }: any) => {
-          window.location.assign('/profile');
+      login(email, password)
+        .then(response => response.text())
+        .then((response: any) => {
+          response = JSON.parse(response);
+            
+          if (response?.status === 'OK') {
+            localStorage.setItem('token', response.data.token);
+            window.location.assign('/');
+          }
+            
+          if (response?.status === 'ERR') {
+            setIsError(true);
+          }
         })
         .catch((e) => {
           console.log(e);
@@ -83,6 +94,10 @@ export const SignInPage: React.FC = () => {
           }
         </Label>
         <LinkStyled href="/RecoveryPassword">{translate('I do not remember the password')}</LinkStyled>
+
+        <Label>
+          {isError && <span style={{ color: 'var(--addable-red)' }}>Ошибка в логине или пароле</span>}
+        </Label>
       </InputsWrapper>
       <ButtonsWrapper>
         <Button

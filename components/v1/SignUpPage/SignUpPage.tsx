@@ -6,6 +6,7 @@ import { Button } from '@/ui/v1/Button/Button';
 import { InputsWrapper, ButtonsWrapper } from '@/components/v1/layout/AuthLayout/styles';
 import { createUser } from '@/api/auth';
 import Loader from '@/ui/v1/Loader/Loader';
+import userState from '@/store/userState';
 
 export const SignUpPage: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -14,6 +15,7 @@ export const SignUpPage: React.FC = () => {
     const [emailError, setEmailError] = useState(false);
     const [passswordError, setPasswordError] = useState(false);
     const [passwordRepeatError, setPasswordRepeatError] = useState(false);
+    const [isError, setIsError] = useState(false);
     const [isAwaiting, setIsAwaiting] = useState(false);
 
     function handleSubmit(event: any) {
@@ -41,8 +43,18 @@ export const SignUpPage: React.FC = () => {
 
         if (email && password && passwordRepeat) {
             createUser(email, password, passwordRepeat)
-                .then(({ data }: any) => {
-                    window.location.assign('/');
+                .then(response => response.text())
+                .then((response: any) => {
+                    response = JSON.parse(response);
+                    
+                    if (response?.status === 'OK') {
+                        localStorage.setItem('token', response.data.token);
+                        window.location.assign('/');
+                    }
+                    
+                    if (response?.status === 'ERR') {
+                        setIsError(true);
+                    }
                 })
                 .catch((e) => {
                     console.log(e);
@@ -104,6 +116,9 @@ export const SignUpPage: React.FC = () => {
                 {passwordRepeatError
                     && <span style={{ color: 'var(--addable-red)' }}>Проверьте правильность заполнения</span>
                 }
+            </Label>
+            <Label>
+                {isError && <span style={{ color: 'var(--addable-red)' }}>Пользователь с таким email уже зарегистрирован</span>}
             </Label>
         </InputsWrapper>
         <ButtonsWrapper>
