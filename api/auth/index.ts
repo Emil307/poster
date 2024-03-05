@@ -1,6 +1,6 @@
 import type { TUser } from '@/domain/types/types';
 
-const API = process.env.API_URL_V1 || 'http://afisha.ledokol.it/api/v1';
+const API = 'https://afisha.ledokol.it:81/api/v1';
 const token = '2c91daf72cbee860cb1b28ad29069f54a944110d'
 
 // export const createUser = async (email: string, password1: string, password2: string) => {
